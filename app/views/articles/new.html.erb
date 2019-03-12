@@ -1,12 +1,12 @@
-<h1>新規論文投稿</h1>
+<h1>New posts</h1>
 <%= form_with model: @article, local: true do |form| %>
-  <p>
-    論文タイトル<br>
-    <%= form.text_field :title %>
+  <p style="margin-left:10px; margin-top:30px; margin-bottom:15px">
+    Title<br>
+    <%= form.text_field :title, class: "form-control" %>
   </p>
-  <p>
-    本文<br>
-    <%= form.text_area :body %>
+  <p style="margin-left:10px; margin-top:30px; margin-bottom:15px">
+    Body<br>
+    <%= form.text_area :body, class: "form-control", size:"20x10" %>
   </p>
-  <%= form.submit "投稿" %>
+  <%= form.submit "Submit", style:"color:white;", class: "btn btn-primary btn-dark col-12" %>
 <% end %>
