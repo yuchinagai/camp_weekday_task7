@@ -1,0 +1,9 @@
+<% @article.each do |article| %>
+  <div class="article">
+  <br>
+    <h2 style="font-size:150%"><%= article.title %></h2>
+    <p><font color="6D757D"><%= article.created_at.strftime('%b %d, %Y') %></font></p>
+    <p><%= truncate(article.body, length: 100) %></p>
+    <p><%= link_to "More detail", article%></p>
+  </div>
+<% end %>

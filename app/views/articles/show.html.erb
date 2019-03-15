@@ -1,0 +1,16 @@
+<h1 style="margin:20px;">Article Detail</h1>
+<table class ="table table-bordered">
+  <thead>
+    <tr>
+      <td bgcolor="F7F7F7"><%= @article.title %></td>
+    </tr>
+  </thead>
+  <tbody>
+  <td>
+    <%= @article.body %><br>
+    <%= link_to "Articles", articles_path, style:"color:white;", class: "btn btn-primary btn-dark mt-2 mb-2 mr-4"%>
+    <%= link_to "Edit", edit_article_path, style:"color:white;", class: "btn btn-primary btn-dark mr-4"%>
+    <%= link_to "Delete", article_path(@article), style:"color:white;", class: "btn btn-primary btn-dark mr-4", method: :delete, data: {confirm: '削除してよろしいですか？'} %>
+  </td>
+  </tbody>
+</table>
